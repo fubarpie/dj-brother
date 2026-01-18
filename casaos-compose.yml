@@ -1,0 +1,16 @@
+name: dj-brother
+services:
+  dj-brother:
+    image: ghcr.io/fubarpie/dj-brother:latest
+    container_name: dj-brother
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - /DATA/AppData/dj-brother/music:/app/music
+      - /DATA/AppData/dj-brother/db/dev.db:/app/prisma/dev.db
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:./dev.db
+      - MUSIC_DIR=/app/music
+
