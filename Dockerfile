@@ -25,6 +25,9 @@ COPY prisma ./prisma/
 # Install dependencies (this will trigger @prisma/client's postinstall which runs prisma generate)
 RUN npm ci
 
+# Ensure the Prisma client is generated (even if npm ci fails to trigger it)
+RUN npx prisma generate
+
 # Copy the rest of the application
 COPY . .
 
