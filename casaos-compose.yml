@@ -11,6 +11,6 @@ services:
       - /DATA/AppData/dj-brother/db/dev.db:/app/prisma/dev.db
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=file:./dev.db
+      - DATABASE_URL=file:./prisma/dev.db
       - MUSIC_DIR=/app/music
 
