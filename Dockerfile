@@ -15,7 +15,7 @@ COPY package.json package-lock.json ./
 COPY prisma ./prisma/
 
 # Install dependencies
-RUN npm ci
+RUN npm install
 
 # Step 2: Build the app
 FROM base AS builder
