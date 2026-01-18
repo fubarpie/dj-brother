@@ -6,32 +6,31 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "prisma generate"
+    "lint": "next lint"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
-    "@prisma/client": "^5.x.x",
-    "axios": "^1.x.x",
-    "clsx": "^2.x.x",
-    "date-fns": "^3.x.x",
-    "lucide-react": "^0.x.x",
-    "next": "14.x.x",
-    "qrcode.react": "^3.x.x",
-    "react": "^18.x.x",
-    "react-dom": "^18.x.x",
-    "tailwind-merge": "^2.x.x"
+    "@prisma/client": "^5.0.0",
+    "axios": "^1.0.0",
+    "clsx": "^2.0.0",
+    "date-fns": "^3.0.0",
+    "lucide-react": "^0.400.0",
+    "next": "14.2.35",
+    "qrcode.react": "^3.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.19.30",
-    "@types/react": "^18.x.x",
-    "@types/react-dom": "^18.x.x",
-    "eslint": "^8.x.x",
-    "eslint-config-next": "14.x.x",
-    "prisma": "^5.x.x",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "14.2.35",
+    "prisma": "^5.0.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.x.x"
+    "typescript": "^5.0.0"
   }
 }
