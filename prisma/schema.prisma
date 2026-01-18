@@ -1,0 +1,38 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Song {
+  id        String    @id @default(cuid())
+  title     String
+  artist    String
+  filePath  String
+  isRequest Boolean   @default(false)
+  playedAt  DateTime?
+  order     Int       @default(0)
+}
+
+model Library {
+  id        String   @id @default(cuid())
+  title     String
+  artist    String
+  filePath  String
+  bpm       Int?
+  genre     String?
+  createdAt DateTime @default(now())
+}
+
+model Request {
+  id         String   @id @default(cuid())
+  title      String
+  artist     String
+  mbid       String?
+  status     String   @default("PENDING")
+  deviceId   String
+  createdAt  DateTime @default(now())
+}

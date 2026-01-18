@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  dj-brother:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./music:/app/music
+      - ./prisma/dev.db:/app/prisma/dev.db
+    environment:
+      - NODE_ENV=development
+      - MUSIC_DIR=/app/music
+      - DATABASE_URL=file:./dev.db
+    restart: unless-stopped
+
+# Note: You may want to add Lidarr to this compose file if you don't have it running elsewhere.
