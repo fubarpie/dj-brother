@@ -13,9 +13,9 @@ export async function searchTracks(query: string): Promise<MBTrack[]> {
     try {
         const response = await axios.get(`${MUSICBRAINZ_URL}/recording`, {
             params: {
-                query: `recording:"${query}" OR artist:"${query}"`,
+                query: `${query}`,
                 fmt: 'json',
-                limit: 10
+                limit: 20
             },
             headers: {
                 'User-Agent': 'DJBrother/1.0.0 ( contact@djbrother.app )'

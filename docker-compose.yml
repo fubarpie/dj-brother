@@ -11,7 +11,7 @@ services:
     environment:
       - NODE_ENV=development
       - MUSIC_DIR=/app/music
-      - DATABASE_URL=file:./dev.db
+      - DATABASE_URL=file:/app/prisma/dev.db
     restart: unless-stopped
 
 # Note: You may want to add Lidarr to this compose file if you don't have it running elsewhere.
