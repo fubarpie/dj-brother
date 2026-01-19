@@ -1,0 +1,5 @@
+completed	failure	Fix: Regenerate lockfile and use npm install for robustness	Docker	main	push	21120715741	1m21s	2026-01-18T23:46:54Z
+completed	failure	Fix Frontend assets and Prisma paths for CasaOS deployment	Docker	main	push	21120676749	1m28s	2026-01-18T23:43:49Z
+completed	success	Fix build: force dynamic API routes, explicit prisma generate, and re…	Docker	main	push	21120569649	2m28s	2026-01-18T23:35:31Z
+completed	failure	Fix build: remove broken music.ts and add casaos-compose	Docker	main	push	21120486401	1m31s	2026-01-18T23:29:09Z
+completed	failure	Simplify Dockerfile: copy prisma schema before npm install	Docker	main	push	21120343645	1m28s	2026-01-18T23:18:10Z
