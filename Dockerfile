@@ -58,12 +58,17 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/prisma ./prisma
 
+# Create data directory for SQLite
+RUN mkdir -p /app/data && chown -R nextjs:nodejs /app/data && chmod -R 770 /app/data
+
 USER nextjs
 
 EXPOSE 3000
 
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
+ENV DATABASE_URL="file:/app/data/dev.db"
 
 # Note: server.js is in the root of the copy above because we copied the contents of standalone
+# Ensure migrations are run or DB is initialized if needed
 CMD ["node", "server.js"]
